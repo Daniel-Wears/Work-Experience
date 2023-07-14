@@ -1,6 +1,7 @@
 
 
 window.addEventListener("load", (event) => {
+  
   // functionality scripts added here
 
   // Accord-ion
@@ -38,7 +39,7 @@ window.addEventListener("load", (event) => {
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 2000); 
   }
 
   // Chart Of MCR setlist ...
@@ -143,6 +144,7 @@ window.addEventListener("load", (event) => {
         labels: ['2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2018', '2019', '2022', '2023']
       },
       options: {
+        
         //animations: {
         //tension: {
         //duration: 1000,
@@ -152,6 +154,7 @@ window.addEventListener("load", (event) => {
         //loop: false
         //}
         //},
+        
         scales: {
           y: {
             min: 0,
