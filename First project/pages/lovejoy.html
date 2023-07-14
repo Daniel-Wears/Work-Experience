@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovejoy </title>
+    <!-- script includes -->
+    <script src="../scripts/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <!-- html Elements -->
+    
+    <!-- Header -->
+     <div class="headerlvjy">
+        <h1>Lovejoy</h1>
+        <p>Lovejoy, 2021–present.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="arctic-monkeys.html">Arctic Monkeys</a>
+      <a href="lovejoy.html">Lovejoy</a>
+      <a href="my-chemical-romance.html">My Chemical Romance</a>
+      <a href="index.html" class="right">Home</a>
+      <a href="contact.html"class="right">Contact</a>
+    </div>
+
+    <!-- Content -->
+    <div class="row">
+        <!-- Side Content -->
+        <div class="side">
+            <h1>LoveJoy</h1>
+            <img src="../assets/Lovejoy-1.png">
+            <p>Lovejoy are an indie rock band formed in Brighton, England in 2021. <br>
+             The Band consists pf William Gold(also known by the stage name Wilbur Soot) as lead vocalist and rythm guitarist,
+             Joe Goldsmith as lead guitarist, 
+             Mark Boardman as drummer, 
+             and Ash Kabosu as bassist, 
+             with all four also sharing in songwriting.
+             Their debut EP, Are You Alright?, was released on 8 May 2021. 
+             Their second EP, Pebble Brain, came out on 14 October 2021. 
+             The band's third EP, Wake Up & It's Over, was released on 12 May 2023. 
+             The band independently release their music under their own label, Anvil Cat Records,
+             distributing with AWAL.</p>
+        </div>
+        <!-- Main Content -->
+        <div class="main">
+            <h1>A map of where lovejoy originates</h1>
+            <div id="mapLoveJoy">
+
+            </div>
+            <h1> Lovejoy setlist times played in concert per song </h1>
+            <div>
+                <canvas id="chartLVJYSET"></canvas>
+              </div>
+              <h1>Lovejoys BBC Music Introducing from Glastonbury 2023</h1>
+              <iframe width="1200" height="650"
+                src="https://www.youtube.com/embed/c_nGSvUKhqI">
+              </iframe>            
+        </div>
+        
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>LoveJoy</h2>
+    </div>
+
+</body>
+</html>
+
+<script>
+// functionality scripts added here
+// Chart Of lovejoy Setlist stats
+  const ctx = document.getElementById('chartLVJYSET')
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Taunt', 'The Fall', 'One Day', 'Cause For Concern', 'Perfume', 'Concrete', 'Concequences', 'Sex Sells', 'Call Me What You Like', 'Model Buses', "You'll Understand When You're Older", "It's All Futile! Its All Pointless! (Wilbur Soot Song)", "It's Golden Hour Somewhere", 'Warsaw', 'Scum', 'Potrait Of A Blank Slate', 'Oh Yeah, You Gonna Cry?', 'Tomorrow (Anvil Cat Cover)', 'Your New Boyfriend (Wilbur Soot Song)', 'Your Sister Was Right (Wilbur Soot Song)', 'Jubilee Line (Wilbur Soot Song)', 'Privately Owned Spiral Galaxy (Crywank Cover)', 'Saline Solution (Wilbur Soot Song)', 'Since I Saw Vienna(Wilbur Soot Song)', 'Welcome To The Black Parade (My Chemical Romance Cover)'],
+      datasets: [{
+        label: '# of Times Played',
+        data: [65, 65, 64, 63, 63, 62, 61, 57, 52, 52, 44, 37, 29, 25, 22, 21, 18, 5, 3, 3, 2, 1, 1, 1, 1],
+        tension: 0.3
+      }]
+    },
+    options: {
+      animations: {
+        tension: {
+          duration: 1000,
+          easing: 'linear',
+          from: 5,
+          to: 0.3,
+          loop: false
+        }
+      },
+      scales: {
+        y: {
+          beginat0: true
+        }
+      }
+    }
+  });
+</script>

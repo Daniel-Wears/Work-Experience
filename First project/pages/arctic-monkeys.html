@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Monkeys </title>
+    <!-- script includes -->
+    <script src="../scripts/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <script src="../scripts/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <!-- html Elements -->
+    
+    <!-- Header -->
+    <div class="headeram">
+        <h1>Arctic Monkeys</h1>
+        <p>The Arctic Monkeys, 2002-Present.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="arctic-monkeys.html">Arctic Monkeys</a>
+      <a href="lovejoy.html">Lovejoy</a>
+      <a href="my-chemical-romance.html">My Chemical Romance</a>
+      <a href="index.html" class="right">Home</a>
+      <a href="contact.html"class="right">Contact</a>
+    </div>
+
+    <!-- Content -->
+    <div class="row">
+        <!-- Side Content -->
+        <div class="side">
+            <h1>The Arctic Monkeys</h1>
+            <img src="../assets/arctic-monkeys-1.png">
+            <p>
+            Arctic Monkeys are an English rock band formed in Sheffield in 2002.
+            The group consists of Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O'Malley (bass guitar, backing vocals),
+             and Matt Helders (drums, backing vocals).
+            Former band member Andy Nicholson (bass guitar, backing vocals) left the band in 2006 shortly after their debut album was released.
+            <br>
+            <br>
+            Arctic Monkeys were heralded as one of the first bands to come to public attention via the Internet,
+             with commentators suggesting they represented the possibility of a change in the way in which new bands are promoted and marketed.
+             Their debut album, Whatever People Say I Am, That's What I'm Not (2006), 
+            became the fastest-selling debut album in UK chart history at the time of its release, and has been hailed as one of the greatest debut albums.
+            It won Best British Album at the 2007 Brit Awards.
+            The band's second album, Favourite Worst Nightmare (2007), was also acclaimed by critics and won Best British Album at the 2008 Brit Awards.
+            They went on to release Humbug (2009) and Suck It and See (2011).
+            <br>
+            <br>
+            The band's wider international fame came with the success of their critically acclaimed fifth album AM (2013)
+            , which was supported by the global hit "Do I Wanna Know?".
+            It topped four Billboard charts and was certified platinum in the US.
+            At the 2014 Brit Awards, the album became their third to win British Album of the Year.
+            Their sixth album, Tranquility Base Hotel & Casino (2018), was a major departure from the band's previous guitar-heavy work, instead being piano-oriented.
+            It received a Best Alternative Music Album nomination at the 2019 Grammy Awards, their second to do so after Whatever People Say I Am, That's What I'm Not.
+            Their seventh album, The Car, was released in 2022.
+            <br>
+            <br>
+            In the United Kingdom, the band became the first independent-label band to debut at number one in the UK with their first five albums.
+            The band have won seven Brit Awards; winning Best British Group and British Album of the Year three times,
+             becoming the first band to ever "do the double" (that is, win in both categories) three times;
+             a Mercury Prize for Whatever People Say I Am, That's What I'm Not, an Ivor Novello Award, and 20 NME Awards.
+             In addition, they have been nominated for six Grammy Awards,
+             and received Mercury Prize nominations in 2007, 2013, and 2018.
+             Both Whatever People Say I Am, That's What I'm Not and AM are included in NME's and different editions of Rolling Stone's 500 Greatest Albums of All Time lists.
+            </p>
+        </div>
+        <!-- Main Content -->
+        <div class="main">
+            <h1>This is a map of where the Arctic Monkeys originates from</h1>
+            <div id="mapAM">
+
+            </div>
+            <h1>Arctic Monkeys setlist times played in concert per song</h1>
+            <div class="chartAmSet">
+                <canvas class="chartAmSet" id="chartAmSet"></canvas>
+            </div>
+            <h1>Arctic Monkeys Live at Reading Festival 2022</h1>
+            <iframe width="1200" height="650"
+              src="https://www.youtube.com/embed/bhk-yqnGlpM">
+            </iframe>            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Arctic Monkeys</h2>
+    </div>
+
+</body>
+</html>
+
+<script>
+// functionality scripts added here
+const ctx = document.getElementById('chartAmSet')
+  
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["I Bet You Look Good on the Dancefloor", "Brianstorm", "Crying Lightning", "The View From the Afternoon", "Fluorescent Adolescent", "Pretty Visitors", "Still Take You Home", "505", "Do Me a Favour", "Dont Sit Down 'Cause I've Moved Your Chair", "When the Sun Goes Down", "Teddy Picker", "Dancing Shoes", "Cornerstone", "R U Mine?", "Do I Wanna Know", "This House Is a Circus", "Arabella", "Why'd You Only Call Me When You're High?", "Snap Out of It", "From the Ritz to the Rubble", "If You Were There, Beware", "Fake Tales of San Francisco", "A Certain Romance", "Mardy Bum", "Knee Socks"],
+      datasets: [{
+      label: '# of Times Played',
+      data: [845, 686, 583, 580, 544, 490, 478, 474, 463, 454, 440, 437, 418, 383, 380, 355, 345, 304, 298, 282, 277, 267, 263, 262, 234, 209],
+        tension: 0.3
+      }]      
+    },
+    options: {
+      animations: {
+        tension: {
+          duration: 1000,
+          easing: 'linear',
+          from: 5,
+          to: 0.3,
+          loop: false
+        }
+      },
+      scales: {
+        y: {
+          beginat0: true
+        }
+      }
+    }
+  });
+
+  setTimeout(function () {
+  window.dispatchEvent(new Event("resize"));
+}, 500);
+</script>
