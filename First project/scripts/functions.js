@@ -75,7 +75,7 @@ window.addEventListener("load", (event) => {
   var mapContainerHome = document.getElementById('map');
   var mapContainerLoveJoy = document.getElementById('mapLoveJoy');
   var mapContainerArtcticMonkeys = document.getElementById('mapAM');
-  var mapContainerRomance = document.getElementById('mapRomance.0');
+  var mapContainerRomance = document.getElementById('mapRomance');
 
   if (mapContainerHome !== null) {
     assignMapHome();
