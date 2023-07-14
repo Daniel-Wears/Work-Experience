@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
     <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <!-- html Elements -->
@@ -72,22 +73,29 @@
       </div>
       <!-- Main Content -->
       <div class="main">
+      <h1>Bands Social Media</h1>
         <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-          <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-          <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+          <button class="tablinks" onclick="openBand(event, 'Arctic')">Arctic Monkeys</button>
+          <button class="tablinks" onclick="openBand(event, 'MyChem')">My Chemical Romance</button>
+          <button class="tablinks" onclick="openBand(event, 'Lovejoy')">LoveJoy</button>
         </div>
-        <div id="London" class="tabcontent">
-          <h3>London</h3>
-          <p>London is the capital city of England.</p>
+        <div id="Arctic" class="tabcontent">
+          <h3>Arctic Monkeys' Socials</h3>
+          <a href="https://www.youtube.com/@arcticmonkeys" class="fa fa-youtube"></a>
+          <a href="https://twitter.com/ArcticMonkeys" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com/arcticmonkeys/?hl=en" class="fa fa-instagram"></a>
         </div>
-        <div id="Paris" class="tabcontent">
-          <h3>Paris</h3>
-          <p>Paris is the capital of France.</p>
+        <div id="MyChem" class="tabcontent">
+          <h3>My Chemical Romance's Socials</h3>
+          <a href="https://www.youtube.com/@mychemicalromance" class="fa fa-youtube"></a>
+          <a href="https://twitter.com/MCRofficial" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com/mychemicalromance/?hl=en" class="fa fa-instagram"></a>
         </div>
-        <div id="Tokyo" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+        <div id="Lovejoy" class="tabcontent">
+          <h3>LoveJoy's Socials</h3>
+          <a href="https://www.youtube.com/@Lovejoyonline" class="fa fa-youtube"></a>
+          <a href="https://twitter.com/lovejoy" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com/lovejoyonline/?hl=en" class="fa fa-instagram"></a>
         </div>
         <!-- Bands Map -->
         <h1>Locations Of Bands</h1>
